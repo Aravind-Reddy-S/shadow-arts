@@ -9,6 +9,7 @@ import type { User as SupaUser } from "@supabase/supabase-js";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
   { to: "/programs", label: "Programs" },
   { to: "/workshops", label: "Workshops" },
   { to: "/shop", label: "Shop" },
