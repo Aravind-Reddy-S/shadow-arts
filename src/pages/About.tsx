@@ -15,6 +15,8 @@ import aboutHeroBg2 from "@/assets/about-hero-bg-2.jpeg";
 
 import teamArunkumar from "@/assets/team-arunkumar.png";
 import teamChandhana from "@/assets/team-chandhana.png";
+import teamVarshitha from "@/assets/team-varshitha.png";
+import teamSushmitha from "@/assets/team-sushmitha.png";
 import mouCbit from "@/assets/mou-cbit.png";
 import mouPidilite from "@/assets/mou-pidilite.png";
 import mouVaagdevi from "@/assets/mou-vaagdevi.png";
@@ -25,6 +27,8 @@ import mouSrUniversity from "@/assets/mou-sr-university.png";
 const teamMembers = [
   { name: "Arunkumar Parkala", role: "Founder & CEO", image: teamArunkumar },
   { name: "Chandhana", role: "Chief Creative Officer & Managing Director", image: teamChandhana },
+  { name: "Varshitha", role: "Creative Head", image: teamVarshitha },
+  { name: "Sushmitha", role: "Workshop Community Head", image: teamSushmitha },
 ];
 
 const mouPartners = [
@@ -178,7 +182,7 @@ export default function About() {
             variants={staggerContainer}
             initial="hidden"
             animate={artistsVisible ? "show" : "hidden"}
-            className="grid md:grid-cols-2 gap-10 max-w-2xl mx-auto"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto"
           >
             {teamMembers.map((a) => (
               <motion.div key={a.name} variants={staggerItem} className="text-center group">
