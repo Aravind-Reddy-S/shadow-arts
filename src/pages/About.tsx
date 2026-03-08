@@ -14,12 +14,6 @@ import aboutWorkshop from "@/assets/about-workshop.jpg";
 import aboutHeroBg from "@/assets/about-hero-bg.jpeg";
 import aboutHeroBg2 from "@/assets/about-hero-bg-2.jpeg";
 
-import teamArunkumar from "@/assets/team-arunkumar.png";
-import teamChandhana from "@/assets/team-chandhana.png";
-import teamVarshitha from "@/assets/team-varshitha.png";
-import teamSushmitha from "@/assets/team-sushmitha.png";
-import teamAravind from "@/assets/team-aravind.png";
-import teamBhagath from "@/assets/team-bhagath.png";
 import mouCbit from "@/assets/mou-cbit.png";
 import mouPidilite from "@/assets/mou-pidilite.png";
 import mouVaagdevi from "@/assets/mou-vaagdevi.png";
