@@ -106,7 +106,10 @@
   }
 }
 
-@keyframes fadeSlide {
-  0%, 20% { opacity: 0.6; }
-  33%, 100% { opacity: 0; }
+@keyframes heroFade {
+  0% { opacity: 0; }
+  12.5% { opacity: 0.6; }
+  50% { opacity: 0.6; }
+  62.5% { opacity: 0; }
+  100% { opacity: 0; }
 }
