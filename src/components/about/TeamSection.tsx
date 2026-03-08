@@ -9,6 +9,7 @@ import teamVarshitha from "@/assets/team-varshitha.png";
 import teamSushmitha from "@/assets/team-sushmitha.png";
 import teamAravind from "@/assets/team-aravind.png";
 import teamBhagath from "@/assets/team-bhagath.png";
+import teamSrinivas from "@/assets/team-srinivas.png";
 
 interface TeamMember {
   name: string;
@@ -66,6 +67,13 @@ const teamMembers: TeamMember[] = [
     image: teamBhagath,
     objectPosition: "top",
     funFact: "Always experimenting with new mediums. If it exists, he's tried to make art with it.",
+    socials: { instagram: "#" },
+  },
+  {
+    name: "Srinivas",
+    role: "UI/UX Designer & Developer",
+    image: teamSrinivas,
+    funFact: "Obsessed with pixel-perfect designs. Bridges the gap between beautiful interfaces and flawless code.",
     socials: { instagram: "#" },
   },
 ];
