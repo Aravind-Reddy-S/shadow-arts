@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <p className="font-body text-secondary tracking-[0.3em] uppercase text-sm mb-3">Testimonials</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">What Our Students Say</h2>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">Words from Our Creative Family</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
