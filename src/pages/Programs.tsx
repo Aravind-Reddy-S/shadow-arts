@@ -14,6 +14,14 @@ import campImg3 from "@/assets/program-camp-3.jpg";
 import professionalImg from "@/assets/program-professional.jpg";
 import proImg2 from "@/assets/program-pro-2.jpg";
 import proImg3 from "@/assets/program-pro-3.jpg";
+import ProgramGallery from "@/components/ProgramGallery";
+
+import womenGallery1 from "@/assets/women-gallery-1.jpg";
+import womenGallery2 from "@/assets/women-gallery-2.jpg";
+import womenGallery3 from "@/assets/women-gallery-3.jpg";
+import womenGallery4 from "@/assets/women-gallery-4.jpg";
+import womenGallery5 from "@/assets/women-gallery-5.jpg";
+import womenGallery6 from "@/assets/women-gallery-6.jpg";
 
 // --- Image Carousel Component ---
 function ImageCarousel({ images, color, badge }: { images: string[]; color: string; badge: React.ReactNode }) {
@@ -91,6 +99,7 @@ const programs = [
       { icon: Sparkles, text: "Create handcrafted products — scarves, wall art, home décor & gifts" },
       { icon: Users, text: "A supportive community of women celebrating culture & creativity" },
     ],
+    galleryImages: [womenGallery1, womenGallery2, womenGallery3, womenGallery4, womenGallery5, womenGallery6],
   },
   {
     title: "Bright Minds Summer Camp",
@@ -107,6 +116,7 @@ const programs = [
       { icon: Users, text: "Group activities, art exhibitions & creative challenges" },
       { icon: BookOpen, text: "Take-home art portfolio and certificate of completion" },
     ],
+    galleryImages: [],
   },
   {
     title: "Professional Art Courses",
@@ -123,6 +133,7 @@ const programs = [
       { icon: Sparkles, text: "Mentorship from renowned traditional and contemporary artists" },
       { icon: Palette, text: "Portfolio development, gallery exposure & career guidance" },
     ],
+    galleryImages: [],
   },
 ];
 
@@ -299,6 +310,19 @@ export default function Programs() {
                   </motion.div>
                 </div>
               </motion.div>
+
+              {/* Gallery */}
+              {program.galleryImages.length > 0 && (
+                <motion.div
+                  className="lg:col-span-2 mt-4"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <ProgramGallery images={program.galleryImages} title={program.title} />
+                </motion.div>
+              )}
             </div>
           </section>
         );
