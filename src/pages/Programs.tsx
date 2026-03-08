@@ -147,7 +147,7 @@ const programs = [
       { icon: Sparkles, text: "Mentorship from renowned traditional and contemporary artists" },
       { icon: Palette, text: "Portfolio development, gallery exposure & career guidance" },
     ],
-    galleryImages: [],
+    galleryImages: [proGallery1, proGallery2, proGallery3, proGallery4, proGallery5, proGallery6],
   },
 ];
 
