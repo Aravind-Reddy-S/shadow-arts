@@ -23,6 +23,13 @@ import womenGallery4 from "@/assets/women-gallery-4.jpg";
 import womenGallery5 from "@/assets/women-gallery-5.jpg";
 import womenGallery6 from "@/assets/women-gallery-6.jpg";
 
+import campGallery1 from "@/assets/camp-gallery-1.jpg";
+import campGallery2 from "@/assets/camp-gallery-2.jpg";
+import campGallery3 from "@/assets/camp-gallery-3.jpg";
+import campGallery4 from "@/assets/camp-gallery-4.jpg";
+import campGallery5 from "@/assets/camp-gallery-5.jpg";
+import campGallery6 from "@/assets/camp-gallery-6.jpg";
+
 // --- Image Carousel Component ---
 function ImageCarousel({ images, color, badge }: { images: string[]; color: string; badge: React.ReactNode }) {
   const [current, setCurrent] = useState(0);
@@ -116,7 +123,7 @@ const programs = [
       { icon: Users, text: "Group activities, art exhibitions & creative challenges" },
       { icon: BookOpen, text: "Take-home art portfolio and certificate of completion" },
     ],
-    galleryImages: [],
+    galleryImages: [campGallery1, campGallery2, campGallery3, campGallery4, campGallery5, campGallery6],
   },
   {
     title: "Professional Art Courses",
