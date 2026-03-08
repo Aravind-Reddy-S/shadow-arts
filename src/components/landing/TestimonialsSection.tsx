@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Priya Sharma", role: "Art Enthusiast", text: "The Warli art workshop was a life-changing experience. The instructors are incredibly knowledgeable and patient." },
-  { name: "Rahul Desai", role: "Interior Designer", text: "I've been incorporating Madhubani pieces from Shadow Arts into my projects. The quality and authenticity is unmatched." },
-  { name: "Ananya Patel", role: "Student", text: "As a beginner, I felt so welcomed. The step-by-step approach made even complex art forms accessible and enjoyable." },
+  { name: "Lavanya Reddy", role: "Mandala Art Student", text: "I never thought I could create something so beautiful with my own hands. The mandala workshop helped me discover a meditative side of art I didn't know existed. Every dot and pattern felt like therapy." },
+  { name: "Sai Kiran Goud", role: "Summer Camp Parent", text: "My daughter attended the summer camp and came home with the most incredible Pichwai painting. The way they teach traditional art forms to young children with so much patience is truly remarkable." },
+  { name: "Bhavana Devi", role: "Women's Workshop Graduate", text: "Shadow Arts gave me more than just an art skill — it gave me confidence. As a homemaker, learning Kalamkari opened doors to freelance work. I'm now earning through my art and it feels wonderful." },
 ];
 
 export default function TestimonialsSection() {
