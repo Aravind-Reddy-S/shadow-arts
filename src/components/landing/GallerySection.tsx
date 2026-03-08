@@ -12,6 +12,8 @@ import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.jpg";
 import gallery8 from "@/assets/gallery-8.jpg";
 import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
+import gallery11 from "@/assets/gallery-11.jpg";
 
 const images = [
   { url: gallery1, title: "Cultural Performance", category: "Events" },
@@ -23,6 +25,8 @@ const images = [
   { url: gallery7, title: "Mandala Workshop", category: "Professional" },
   { url: gallery8, title: "DIY Art Kit", category: "Products" },
   { url: gallery9, title: "Young Artist", category: "Summer Camp" },
+  { url: gallery10, title: "Pencil Sketch", category: "Professional" },
+  { url: gallery11, title: "Art Display", category: "Exhibition" },
 ];
 
 const containerVariants = {
