@@ -14,6 +14,14 @@ import campImg3 from "@/assets/program-camp-3.jpg";
 import professionalImg from "@/assets/program-professional.jpg";
 import proImg2 from "@/assets/program-pro-2.jpg";
 import proImg3 from "@/assets/program-pro-3.jpg";
+import ProgramGallery from "@/components/ProgramGallery";
+
+import womenGallery1 from "@/assets/women-gallery-1.jpg";
+import womenGallery2 from "@/assets/women-gallery-2.jpg";
+import womenGallery3 from "@/assets/women-gallery-3.jpg";
+import womenGallery4 from "@/assets/women-gallery-4.jpg";
+import womenGallery5 from "@/assets/women-gallery-5.jpg";
+import womenGallery6 from "@/assets/women-gallery-6.jpg";
 
 // --- Image Carousel Component ---
 function ImageCarousel({ images, color, badge }: { images: string[]; color: string; badge: React.ReactNode }) {
