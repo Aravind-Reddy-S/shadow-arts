@@ -7,6 +7,20 @@ import { motion } from "framer-motion";
 import { ShoppingCart, IndianRupee } from "lucide-react";
 import { useCart } from "@/hooks/useCart";
 
+import shopWarli from "@/assets/shop-warli-painting.jpg";
+import shopMadhubani from "@/assets/shop-madhubani-canvas.jpg";
+import shopPichwai from "@/assets/shop-pichwai-art.jpg";
+import shopGond from "@/assets/shop-gond-art.jpg";
+import shopKalamkari from "@/assets/shop-kalamkari-textile.jpg";
+import shopMandala from "@/assets/shop-mandala-print.jpg";
+
+const fallbackImages = [shopWarli, shopMadhubani, shopPichwai, shopGond, shopKalamkari, shopMandala];
+
+function getProductImage(product: any, index: number): string {
+  if (product.image_url) return product.image_url;
+  return fallbackImages[index % fallbackImages.length];
+}
+
 export default function Shop() {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
