@@ -193,6 +193,48 @@ export default function About() {
         </div>
       </section>
 
+
+      {/* ═══════════════ MOU PARTNERS ═══════════════ */}
+      <section className="py-24 bg-muted/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <p className="font-body text-secondary tracking-[0.3em] uppercase text-sm mb-4">Our Partners</p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">MOUs & Collaborations</h2>
+            <p className="font-body text-muted-foreground mt-4 max-w-2xl mx-auto">
+              We are proud to collaborate with leading institutions and organizations to promote art education and cultural heritage.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {mouPartners.map((partner, i) => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-background rounded-2xl p-6 flex flex-col items-center text-center shadow-md hover:shadow-lg transition-shadow group"
+              >
+                <div className="w-28 h-28 mb-4 flex items-center justify-center rounded-xl bg-white p-2">
+                  <img
+                    src={partner.image}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="font-display text-sm font-semibold text-foreground leading-tight">{partner.name}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════ VALUES ═══════════════ */}
       <section ref={valuesRef} className="py-24 bg-primary">
         <div className="container">
