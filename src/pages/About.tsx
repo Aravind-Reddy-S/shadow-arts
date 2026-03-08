@@ -19,16 +19,7 @@ import mouPidilite from "@/assets/mou-pidilite.png";
 import mouVaagdevi from "@/assets/mou-vaagdevi.png";
 import mouSrUniversity from "@/assets/mou-sr-university.png";
 
-/* ── Data from the GitHub repo ── */
-
-const teamMembers = [
-  { name: "Arunkumar Parkala", role: "Founder & CEO", image: teamArunkumar },
-  { name: "Chandhana", role: "Co-Founder & Chief Creative Officer", image: teamChandhana },
-  { name: "Varshitha", role: "Creative Head", image: teamVarshitha },
-  { name: "Sushmitha", role: "Workshop Community Head", image: teamSushmitha },
-  { name: "Sangem Aravind Reddy", role: "Technical Head", image: teamAravind, objectPosition: "top" },
-  { name: "Bhagath Vallala", role: "R&D Engineer", image: teamBhagath, objectPosition: "top" },
-];
+/* ── Data ── */
 
 const mouPartners = [
   { name: "Chaitanya Bharathi Institute of Technology", image: mouCbit },
