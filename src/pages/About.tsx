@@ -15,22 +15,10 @@ import artistSofia from "@/assets/artist-sofia.jpg";
 
 /* ── Data from the GitHub repo ── */
 
-const artworks = [
-  { id: 1, title: "Abstract Shadows", artist: "Elena Myers", year: 2023, image: artAbstract, category: "abstract" },
-  { id: 2, title: "Urban Reflections", artist: "James Chen", year: 2024, image: artUrban, category: "urban" },
-  { id: 3, title: "Ethereal Forms", artist: "Sofia Rodriguez", year: 2022, image: artEthereal, category: "sculpture" },
-];
-
 const artists = [
   { name: "Elena Myers", role: "Abstract & Shadow Art", image: artistElena, social: "@elenamyers" },
   { name: "James Chen", role: "Urban Photography", image: artistJames, social: "@jameschen" },
   { name: "Sofia Rodriguez", role: "Sculptor", image: artistSofia, social: "@sofiarodriguez" },
-];
-
-const workshops = [
-  { title: "Exploring Shadow Art", date: "June 12, 2025", instructor: "Dr. Emily Ward" },
-  { title: "Mastering Light and Dark", date: "July 8, 2025", instructor: "Mark Daniels" },
-  { title: "Sculpting Shadows", date: "August 20, 2025", instructor: "Sofia Rodriguez" },
 ];
 
 const values = [
