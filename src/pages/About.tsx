@@ -4,13 +4,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
-  Heart, Eye, Users, Sparkles, ArrowRight, Calendar, Clock, User,
+  Heart, Eye, Users, Sparkles, ArrowRight,
   Instagram, Twitter, Facebook, Mail,
 } from "lucide-react";
 
-import artAbstract from "@/assets/art-abstract-shadows.jpg";
-import artUrban from "@/assets/art-urban-reflections.jpg";
-import artEthereal from "@/assets/art-ethereal-forms.jpg";
 import aboutWorkshop from "@/assets/about-workshop.jpg";
 import artistElena from "@/assets/artist-elena.jpg";
 import artistJames from "@/assets/artist-james.jpg";
@@ -73,10 +70,8 @@ const staggerItem = {
 
 export default function About() {
   const { ref: storyRef, isVisible: storyVisible } = useScrollReveal(0.2);
-  const { ref: galleryRef, isVisible: galleryVisible } = useScrollReveal(0.15);
   const { ref: artistsRef, isVisible: artistsVisible } = useScrollReveal(0.15);
   const { ref: valuesRef, isVisible: valuesVisible } = useScrollReveal(0.15);
-  const { ref: workshopsRef, isVisible: workshopsVisible } = useScrollReveal(0.15);
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal(0.2);
 
   return (
