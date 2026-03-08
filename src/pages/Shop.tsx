@@ -65,11 +65,8 @@ export default function Shop() {
                   className="group rounded-lg border border-border bg-card overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="aspect-square overflow-hidden bg-muted">
-                    {p.image_url ? (
-                      <img src={p.image_url} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-muted-foreground font-body">No Image</div>
-                    )}
+                    <img src={getProductImage(p, i)} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
                   </div>
                   <div className="p-5">
                     <h3 className="font-display text-lg font-semibold text-foreground mb-1">{p.name}</h3>
