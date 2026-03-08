@@ -31,8 +31,8 @@ const teamMembers = [
   { name: "Chandhana", role: "Chief Creative Officer & Managing Director", image: teamChandhana },
   { name: "Varshitha", role: "Creative Head", image: teamVarshitha },
   { name: "Sushmitha", role: "Workshop Community Head", image: teamSushmitha },
-  { name: "Sangem Aravind Reddy", role: "Technical Head", image: teamAravind },
-  { name: "Bhagath Vallala", role: "R&D Engineer", image: teamBhagath },
+  { name: "Sangem Aravind Reddy", role: "Technical Head", image: teamAravind, objectPosition: "top" },
+  { name: "Bhagath Vallala", role: "R&D Engineer", image: teamBhagath, objectPosition: "top" },
 ];
 
 const mouPartners = [
@@ -194,6 +194,7 @@ export default function About() {
                   <img
                     src={a.image}
                     alt={a.name}
+                    style={a.objectPosition ? { objectPosition: a.objectPosition } : undefined}
                     className="w-full h-full rounded-full object-cover border-4 border-secondary/30 group-hover:border-secondary transition-colors duration-300"
                   />
                 </div>
