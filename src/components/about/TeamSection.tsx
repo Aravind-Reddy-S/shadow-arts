@@ -74,26 +74,26 @@ const bottomRow: TeamMember[] = [
 function FloatingDots({ active, color }: { active: boolean; color: string }) {
   return (
     <>
-      {[...Array(6)].map((_, i) => {
-        const angle = (i * 60) * (Math.PI / 180);
-        const radius = 90;
+      {[...Array(10)].map((_, i) => {
+        const angle = (i * 36) * (Math.PI / 180);
+        const radius = 95 + (i % 3) * 15;
         return (
           <motion.div
             key={i}
             animate={{
-              x: active ? Math.cos(angle + Date.now() * 0.001) * radius : 0,
-              y: active ? Math.sin(angle + Date.now() * 0.001) * radius : 0,
-              opacity: active ? [0, 1, 0] : 0,
-              scale: active ? [0, 1.5, 0] : 0,
+              x: active ? Math.cos(angle) * radius : 0,
+              y: active ? Math.sin(angle) * radius : 0,
+              opacity: active ? [0, 1, 0.8, 0] : 0,
+              scale: active ? [0, 2, 1.5, 0] : 0,
             }}
             transition={{
-              duration: 2,
-              delay: i * 0.2,
+              duration: 1.8,
+              delay: i * 0.12,
               repeat: active ? Infinity : 0,
               ease: "easeInOut",
             }}
-            className="absolute top-1/2 left-1/2 w-1.5 h-1.5 rounded-full pointer-events-none"
-            style={{ background: color }}
+            className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full pointer-events-none"
+            style={{ background: color, boxShadow: `0 0 8px 2px ${color}` }}
           />
         );
       })}
@@ -167,22 +167,32 @@ function MemberNode({
         onMouseLeave={handleLeave}
         className="relative cursor-pointer will-change-transform"
       >
-        {/* Outer glow pulse */}
+        {/* Multi-layer glow */}
         <motion.div
           animate={{
-            opacity: hovered ? 0.8 : 0,
-            scale: hovered ? 1.2 : 0.9,
+            opacity: hovered ? 1 : 0,
+            scale: hovered ? 1.4 : 0.8,
           }}
-          transition={{ duration: 0.6 }}
-          className="absolute -inset-6 rounded-full blur-2xl pointer-events-none"
+          transition={{ duration: 0.5 }}
+          className="absolute -inset-10 rounded-full blur-3xl pointer-events-none"
+          style={{ background: member.glowColor }}
+        />
+        <motion.div
+          animate={{
+            opacity: hovered ? 0.6 : 0,
+            scale: hovered ? 1.6 : 0.9,
+          }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="absolute -inset-16 rounded-full blur-[60px] pointer-events-none"
           style={{ background: member.glowColor }}
         />
 
-        {/* Spinning gradient ring */}
+        {/* Spinning gradient ring — faster on hover */}
         <motion.div
-          animate={{ rotate: hovered ? 360 : 0 }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: hovered ? 3 : 12, repeat: Infinity, ease: "linear" }}
           className={`absolute -inset-[5px] rounded-full bg-gradient-to-br ${member.accent} p-[3px]`}
+          style={{ boxShadow: hovered ? `0 0 20px 4px ${member.glowColor}` : "none" }}
         >
           <div className="w-full h-full rounded-full bg-background" />
         </motion.div>
@@ -190,12 +200,24 @@ function MemberNode({
         {/* Second decorative dashed ring */}
         <motion.div
           animate={{
-            rotate: hovered ? -180 : 0,
-            opacity: hovered ? 0.5 : 0.15,
-            scale: hovered ? 1.12 : 1.08,
+            rotate: hovered ? -360 : 0,
+            opacity: hovered ? 0.7 : 0.15,
+            scale: hovered ? 1.18 : 1.08,
           }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute -inset-4 rounded-full border border-dashed border-muted-foreground/30 pointer-events-none"
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute -inset-5 rounded-full border-2 border-dashed pointer-events-none"
+          style={{ borderColor: hovered ? member.glowColor : "hsl(var(--muted-foreground) / 0.2)" }}
+        />
+
+        {/* Third pulsing ring */}
+        <motion.div
+          animate={{
+            opacity: hovered ? [0.4, 0.8, 0.4] : 0,
+            scale: hovered ? [1.15, 1.25, 1.15] : 1.1,
+          }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -inset-7 rounded-full border pointer-events-none"
+          style={{ borderColor: member.glowColor }}
         />
 
         {/* Floating particles */}
