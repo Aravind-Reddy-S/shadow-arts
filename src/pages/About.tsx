@@ -11,6 +11,7 @@ import {
 import aboutWorkshop from "@/assets/about-workshop.jpg";
 import aboutHeroBg from "@/assets/about-hero-bg.jpeg";
 import aboutHeroBg2 from "@/assets/about-hero-bg-2.jpeg";
+import aboutHeroBg3 from "@/assets/hero-home-bg.jpeg";
 import artistElena from "@/assets/artist-elena.jpg";
 import artistJames from "@/assets/artist-james.jpg";
 import artistSofia from "@/assets/artist-sofia.jpg";
@@ -80,8 +81,9 @@ export default function About() {
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="relative min-h-[70vh] flex items-center bg-primary overflow-hidden">
         <div className="absolute inset-0">
-          <img src={aboutHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 animate-[fadeOut_8s_ease-in-out_infinite_alternate]" />
-          <img src={aboutHeroBg2} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60 animate-[fadeIn_8s_ease-in-out_infinite_alternate]" />
+          <img src={aboutHeroBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ animation: 'fadeSlide 12s ease-in-out infinite' }} />
+          <img src={aboutHeroBg2} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ animation: 'fadeSlide 12s ease-in-out 4s infinite' }} />
+          <img src={aboutHeroBg3} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ animation: 'fadeSlide 12s ease-in-out 8s infinite' }} />
         </div>
         <div className="absolute inset-0 bg-primary/50" />
         <div className="absolute inset-0 opacity-5">
