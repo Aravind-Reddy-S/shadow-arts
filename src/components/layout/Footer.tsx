@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Youtube, Mail, Phone, MapPin, MessageCircle, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -40,14 +41,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social */}
           <div>
             <h4 className="font-display text-sm font-semibold text-primary-foreground uppercase tracking-widest mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="p-2 rounded-full border border-primary-foreground/20 hover:border-secondary hover:text-secondary transition-colors">
-                  <Icon className="h-5 w-5" />
-                </a>
+            <div className="flex flex-col gap-3">
+              {[
+                { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/_shadowarts_official" },
+                { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@shadowarts_official" },
+                { icon: MessageCircle, label: "WhatsApp", href: "https://tr.ee/hqzGJrHP4K" },
+              ].map((social, i) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.15 }}
+                  className="flex items-center gap-3 px-4 py-2.5 rounded-lg border border-primary-foreground/20 hover:border-secondary hover:bg-secondary/10 transition-all duration-300 group"
+                >
+                  <social.icon className="h-5 w-5 text-secondary" />
+                  <span className="font-body text-sm text-primary-foreground/80 group-hover:text-secondary transition-colors">{social.label}</span>
+                  <ExternalLink className="h-3 w-3 ml-auto text-primary-foreground/40 group-hover:text-secondary transition-colors" />
+                </motion.a>
               ))}
             </div>
           </div>
