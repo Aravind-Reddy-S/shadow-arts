@@ -54,18 +54,8 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.7, delay },
 });
 
-const staggerContainer = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
-const staggerItem = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 export default function About() {
   const { ref: storyRef, isVisible: storyVisible } = useScrollReveal(0.2);
-  const { ref: artistsRef, isVisible: artistsVisible } = useScrollReveal(0.15);
   const { ref: valuesRef, isVisible: valuesVisible } = useScrollReveal(0.15);
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollReveal(0.2);
 
