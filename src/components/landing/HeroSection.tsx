@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import heroHomeBg from "@/assets/hero-home-bg.jpeg";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-primary overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroHomeBg} alt="" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-primary/60" />
+      </div>
+
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-64 h-64 border border-primary-foreground rounded-full" />
