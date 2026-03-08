@@ -17,6 +17,8 @@ import teamArunkumar from "@/assets/team-arunkumar.png";
 import teamChandhana from "@/assets/team-chandhana.png";
 import teamVarshitha from "@/assets/team-varshitha.png";
 import teamSushmitha from "@/assets/team-sushmitha.png";
+import teamAravind from "@/assets/team-aravind.png";
+import teamBhagath from "@/assets/team-bhagath.png";
 import mouCbit from "@/assets/mou-cbit.png";
 import mouPidilite from "@/assets/mou-pidilite.png";
 import mouVaagdevi from "@/assets/mou-vaagdevi.png";
@@ -29,6 +31,8 @@ const teamMembers = [
   { name: "Chandhana", role: "Chief Creative Officer & Managing Director", image: teamChandhana },
   { name: "Varshitha", role: "Creative Head", image: teamVarshitha },
   { name: "Sushmitha", role: "Workshop Community Head", image: teamSushmitha },
+  { name: "Sangem Aravind Reddy", role: "Technical Head", image: teamAravind },
+  { name: "Bhagath Vallala", role: "R&D Engineer", image: teamBhagath },
 ];
 
 const mouPartners = [
@@ -182,7 +186,7 @@ export default function About() {
             variants={staggerContainer}
             initial="hidden"
             animate={artistsVisible ? "show" : "hidden"}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto"
           >
             {teamMembers.map((a) => (
               <motion.div key={a.name} variants={staggerItem} className="text-center group">
