@@ -71,7 +71,7 @@ export default function Navbar() {
                 </Link>
               )}
               <Link to="/profile">
-                <Button variant="outline" size="sm" className="border-secondary/40 text-primary-foreground hover:bg-secondary hover:text-secondary-foreground">
+                <Button variant="outline" size="sm" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
                   <User className="h-4 w-4 mr-1" /> Dashboard
                 </Button>
               </Link>
