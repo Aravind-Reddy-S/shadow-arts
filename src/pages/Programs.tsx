@@ -123,7 +123,7 @@ const programs = [
       { icon: Users, text: "Group activities, art exhibitions & creative challenges" },
       { icon: BookOpen, text: "Take-home art portfolio and certificate of completion" },
     ],
-    galleryImages: [],
+    galleryImages: [campGallery1, campGallery2, campGallery3, campGallery4, campGallery5, campGallery6],
   },
   {
     title: "Professional Art Courses",
