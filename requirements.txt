@@ -3,3 +3,4 @@ djangorestframework==3.15.1
 django-cors-headers==4.1.0
 gunicorn
 whitenoise
+psycopg2-binary
