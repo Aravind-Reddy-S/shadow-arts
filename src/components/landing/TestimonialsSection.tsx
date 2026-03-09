@@ -3,19 +3,20 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ananya Sharma",
-    role: "Workshop Participant",
-    text: "Shadow Arts workshops helped me reconnect with Indian traditional art. The instructors were amazing and the environment was so inspiring.",
+    name: "Lavanya Reddy",
+    role: "Mandala Art Student",
+    text: "I never thought I could create something so beautiful with my own hands. The mandala workshop helped me discover a meditative side of art I didn't know existed. Every dot and pattern felt like therapy.",
   },
   {
-    name: "Rahul Verma",
-    role: "Art Enthusiast",
-    text: "I attended the Warli workshop and absolutely loved it. The teaching style was simple and engaging. Highly recommended!",
+    name: "Sai Kiran Goud",
+    role: "Summer Camp Parent",
+    text: "My daughter attended the summer camp and came home with the most incredible Pichwai painting. The way they teach traditional art forms to young children with so much patience is truly remarkable."
+
   },
   {
-    name: "Priya Nair",
-    role: "Parent",
-    text: "My daughter attended the summer camp and she learned so many art styles. It boosted her creativity and confidence.",
+    name: "Bhavana Devi",
+    role: "Women's Workshop Graduate",
+    text: "Shadow Arts gave me more than just an art skill — it gave me confidence. As a homemaker, learning Kalamkari opened doors to freelance work. I'm now earning through my art and it feels wonderful."
   },
 ];
 
