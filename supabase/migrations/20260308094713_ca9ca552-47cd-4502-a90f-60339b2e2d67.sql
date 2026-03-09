@@ -1,1 +1,0 @@
-UPDATE products SET image_url = NULL WHERE is_active = true;

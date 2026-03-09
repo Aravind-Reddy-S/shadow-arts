@@ -1,73 +1,286 @@
-# Welcome to your Lovable project
+# 🎨 Shadow Arts Platform
 
-## Project info
+A **full-stack web platform for managing art workshops and cultural programs**, built using **React + Django REST Framework**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The platform allows users to explore traditional art, book workshops, watch testimonials, and interact with the organization while administrators manage all content through a powerful admin panel.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+# 🌟 Highlights
 
-**Use Lovable**
+✨ Modern React UI
+✨ Django REST API backend
+✨ Admin CMS for managing workshops
+✨ Dynamic workshop booking system
+✨ Image & video testimonial support
+✨ Responsive design for mobile & desktop
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+# 🚀 Live Demo
 
-**Use your preferred IDE**
+*(Add your deployed URL here)*
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+https://yourdomain.com
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# 🧩 Features
 
-**Use GitHub Codespaces**
+## 👤 User Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+* User Registration
+* User Login
+* Browse upcoming workshops
+* Workshop booking system
+* Explore traditional Indian art
+* Contact form
+* Video & image testimonials
+* Art gallery
+* Product showcase
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🛠 Admin Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Admin dashboard allows managing:
 
-## How can I deploy this project?
+* Workshops
+* Bookings
+* Testimonials
+* Products
+* Orders
+* Contact messages
+* User profiles
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Admin panel:
 
-## Can I connect a custom domain to my Lovable project?
+```
+/admin
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# 🧠 System Architecture
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+Browser
+   │
+   ▼
+React Frontend (Vite + TypeScript)
+   │
+   ▼
+Django Backend (REST API)
+   │
+   ▼
+SQLite Database
+   │
+   ▼
+Django Admin CMS
+```
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* TailwindCSS
+* Framer Motion
+
+## Backend
+
+* Django
+* Django REST Framework
+* SQLite (development)
+
+## Tools
+
+* Node.js
+* npm
+* Git
+
+---
+
+# 📁 Project Structure
+
+```
+smooth-user-flow
+│
+├── backend
+│   └── shadowarts
+│       ├── api
+│       │   ├── models.py
+│       │   ├── views.py
+│       │   ├── serializers.py
+│       │   ├── urls.py
+│       │   └── admin.py
+│       │
+│       ├── shadowarts
+│       │   ├── settings.py
+│       │   └── urls.py
+│       │
+│       └── frontend
+│
+├── src
+│   ├── components
+│   ├── pages
+│   ├── hooks
+│   └── assets
+│
+├── dist
+├── public
+└── package.json
+```
+
+---
+
+# ⚙️ Installation Guide
+
+## 1️⃣ Clone Repository
+
+```
+git clone https://github.com/yourusername/shadow-arts.git
+cd shadow-arts
+```
+
+---
+
+## 2️⃣ Install Frontend Dependencies
+
+```
+npm install
+```
+
+---
+
+## 3️⃣ Build Frontend
+
+```
+npm run build
+```
+
+---
+
+## 4️⃣ Copy React Build to Django
+
+```
+Copy-Item dist\* backend\shadowarts\frontend -Recurse -Force
+```
+
+---
+
+## 5️⃣ Run Django Server
+
+```
+cd backend/shadowarts
+py -3.13 manage.py runserver
+```
+
+---
+
+## 6️⃣ Open Website
+
+```
+http://127.0.0.1:8000
+```
+
+Admin panel:
+
+```
+http://127.0.0.1:8000/admin
+```
+
+---
+
+# 🔌 API Endpoints
+
+| Endpoint           | Method | Description          |
+| ------------------ | ------ | -------------------- |
+| /api/register      | POST   | Register new user    |
+| /api/login         | POST   | Login user           |
+| /api/workshops     | GET    | List workshops       |
+| /api/book-workshop | POST   | Book workshop        |
+| /api/products      | GET    | List products        |
+| /api/contact       | POST   | Send contact message |
+| /api/testimonials  | GET    | Get testimonials     |
+
+---
+
+# 🎥 Media Support
+
+The system supports:
+
+* Image testimonials
+* Video testimonials
+* Workshop images
+* Product images
+
+Media files are stored in Django's **media directory**.
+
+---
+
+# 🔐 Environment Variables
+
+Create `.env` file:
+
+```
+OPENAI_API_KEY=your_openai_key
+```
+
+---
+
+# 🚀 Deployment
+
+Recommended hosting:
+
+### Backend
+
+* Render
+* Railway
+* DigitalOcean
+
+### Frontend
+
+React is built and served directly by Django.
+
+---
+
+# 📈 Future Improvements
+
+* Razorpay payment integration
+* Email notifications
+* Workshop certificates
+* Product checkout system
+* User dashboard improvements
+* Booking confirmation system
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+Steps:
+
+1. Fork repository
+2. Create new branch
+3. Commit changes
+4. Submit pull request
+
+---
+
+# 👨‍💻 Author
+
+Arru
+Full Stack Developer
+
+---
+
+# 📄 License
+
+This project is created for **educational and portfolio purposes**.
