@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'shadowarts.shadowarts.urls'
+ROOT_URLCONF = 'shadowarts.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'shadowarts.shadowarts.wsgi.application'
+WSGI_APPLICATION = 'shadowarts.wsgi.application'
 
 
 # Database
